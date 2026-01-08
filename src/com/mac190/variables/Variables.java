@@ -15,7 +15,6 @@ be one of the reserved words: public, private, class, static, void, main, if, el
 while, do, import, ...
 Do the following:
 
-
  */
 public class Variables {
     public static void main(String[] args) {
