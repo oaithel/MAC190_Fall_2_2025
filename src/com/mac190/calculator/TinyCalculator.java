@@ -15,34 +15,39 @@ public class TinyCalculator {
     public static void main(String[] args) {
         //create a scanner
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter an expression in the form A + B:");
-        //read a first double
-        double first = sc.nextDouble();
-        //read a character
-        char oper = sc.next().charAt(0);
-        //read the second double
-        double second = sc.nextDouble();
-        double result = 0;
-        switch(oper){
-            case '+':
-                result = first+second;
-                System.out.println(first + " + " + second + " = " + result);
-                break;
-            case '-':
-                result = first-second;
-                System.out.println(first + " - " + second + " = " + result);
-                break;
-            case '*':
-                result = first*second;
-                System.out.println(first + " * " + second + " = " + result);
-                break;
-            case '/':
-                result = first/second;
-                System.out.println(first + " / " + second + " = " + result);
-                break;
-            default:
-                System.out.println("Invalid operation");
-        }
+        char userChoice = 'y';
+        do {
+            System.out.println("enter an expression in the form A + B:");
+            //read a first double
+            double first = sc.nextDouble();
+            //read a character
+            char oper = sc.next().charAt(0);
+            //read the second double
+            double second = sc.nextDouble();
+            double result = 0;
+            switch (oper) {
+                case '+':
+                    result = first + second;
+                    System.out.println(first + " + " + second + " = " + result);
+                    break;
+                case '-':
+                    result = first - second;
+                    System.out.println(first + " - " + second + " = " + result);
+                    break;
+                case '*':
+                    result = first * second;
+                    System.out.println(first + " * " + second + " = " + result);
+                    break;
+                case '/':
+                    result = first / second;
+                    System.out.println(first + " / " + second + " = " + result);
+                    break;
+                default:
+                    System.out.println("Invalid operation");
+            }
+            System.out.println("Do you want to continue[Y/N]: ");
+            userChoice = sc.next().charAt(0);
+        }while(Character.toLowerCase(userChoice) == 'y');
 
     }
 }
