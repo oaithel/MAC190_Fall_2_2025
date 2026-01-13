@@ -58,6 +58,5 @@ public class Temperature {
             default:
                 System.out.println("Invalid choice");
         }
-
     }
 }
