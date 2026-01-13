@@ -30,12 +30,22 @@ Evaluate the following conditions:
 5) (var1 < var3 || var2 < 0) && var3 > 0  (T || F) && T = T
 6) var1 < var3 || var2 < 0 && var3 < 0 same as var1 < var3 || (var2 < 0 && var3 < 0)
                                                     T || (F && F) = T || F = T
-4) var1 < var3 || (var2 < 0 && var3 < 0)  Same as above, result True
-5) (var1 < var3 || var2 < 0) && var3 < 0  (T || F) && F = T && F = F
+7) var1 < var3 || (var2 < 0 && var3 < 0)  Same as above, result True
+8) (var1 < var3 || var2 < 0) && var3 < 0  (T || F) && F = T && F = F
  */
 public class Selection {
     public static void main(String[] args) {
         //try all the previous examples in an if-else statement
         // and display which condition is true and which is false.
+        int var1 = 2, var2 = 4, var3 = 7;
+        System.out.println("var1 > 0 || var1 < 0: " + (var1 > 0 || var1 < 0 ));
+        System.out.println("var1 < var2 && var2 > 0 " + (var1 < var2 && var2 > 0) );
+        System.out.println("var1 < var3 || var2 < 0 && var3 > 0: " + (var1 < var3 || var2 < 0 && var3 > 0));
+        System.out.println("var1 < var3 || (var2 < 0 && var3 > 0): " + (var1 < var3 || (var2 < 0 && var3 > 0)));
+        System.out.println("(var1 < var3 || var2 < 0) && var3 > 0: " + ((var1 < var3 || var2 < 0) && var3 > 0));
+
+        System.out.println("var1 < var3 || var2 < 0 && var3 < 0: " + (var1 < var3 || var2 < 0 && var3 < 0));
+        System.out.println("var1 < var3 || (var2 < 0 && var3 < 0): " + (var1 < var3 || (var2 < 0 && var3 < 0)));
+        System.out.println("(var1 < var3 || var2 < 0) && var3 < 0: " + ((var1 < var3 || var2 < 0) && var3 < 0));
     }
 }
