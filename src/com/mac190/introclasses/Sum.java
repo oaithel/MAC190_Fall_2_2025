@@ -1,6 +1,6 @@
 package com.mac190.introclasses;
 
-public class Sum{
+public class Sum {
     int x, y;
 
     public void add(){
@@ -15,4 +15,5 @@ public class Sum{
     public void divide(){
         System.out.println(x + " / " + y + " = " + (x/y));
     }
+
 }

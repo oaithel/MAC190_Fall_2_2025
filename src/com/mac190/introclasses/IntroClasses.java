@@ -64,12 +64,28 @@ public class IntroClasses {
         calc.add();
         calc.multiply();
         //create another Sum object with 2 and 4 for x and y
-
+        Sum mine = new Sum();
+        mine.x = 2;
+        mine.y = 4;
         //invoke add and subtract on the new object.
-
-        //assign the old object tot he new object
-
-        //invoke add and subtract on the new object, and on the old object
+        mine.add();
+        mine.subtract();
+        //assign the old object to the new object
+        mine = calc;
+        //invoke add on the new object, and on the old object
+        mine.add();
+        calc.add();
+        //change x of new object to 7
+        mine.x = 7;
+        //invoke add on the new object, and on the old object
+        mine.add();
+        calc.add();
         //what do you think happened? How many objects do you have now?
+        /*
+        When we assign calc to mine, mine will reference the old object and
+        the old object ends having two references and the new object with no
+        reference and wll be destroyed by the Java garbage collector. therefore
+        at the end we end up having only one object with two references.
+         */
     }
 }
