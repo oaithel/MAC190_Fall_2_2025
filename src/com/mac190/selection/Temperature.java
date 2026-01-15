@@ -50,7 +50,7 @@ public class Temperature {
                 double celcius = (temperature - 32)*(5.0/9.0);
                 System.out.println(temperature + " in fahrenheit is " + celcius + " in celcius");
                 break;
-            case 'c':
+                case 'c':
             case 'C':
                 double fah = (temperature*(9.0/5.0) + 32);
                 System.out.println(temperature + " in celcius is " + fah + " in fahrenheit");
