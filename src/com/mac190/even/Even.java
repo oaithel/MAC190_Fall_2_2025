@@ -15,6 +15,17 @@ in this object and a
  */
 public class Even {
     private int even;
+    //A constructor is a method with same name as the class without type.
+    //it is used to construct object with initial attributes.
+    //it has to be public. and you can have as many constructors as you wish
+    //as long as they have different parameters.
+    //the constructor that has no parameter us called the default constructor.
+    public Even(){
+        even = 0;
+    }
+    public Even(int a){
+        this.setEven(a);
+    }
     //getter
     public int getEven(){
         return even;
@@ -50,6 +61,20 @@ public class Even {
         //A third object is created because e and this should not be modified.
         Even sum = new Even();
         sum.setEven(e.even + this.even);
+        return sum;
+    }
+    //Overloading is having the same method with different parameters. It is allowed
+    //as long as you don't differentiate solely based on the return value. Either the
+    //type of input parameters are not same or the number of input parameters is not
+    //the same.
+    // public int add(Even e) is not allowed because the difference fro the previous
+    //method is only the return type.
+    public Even add(int a){
+        //How many Even objects are there in total?
+        //There will be three objects: e, this, and the returned object
+        //A third object is created because e and this should not be modified.
+        Even sum = new Even();
+        sum.setEven(a + this.even);
         return sum;
     }
 

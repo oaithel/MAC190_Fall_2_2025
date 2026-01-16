@@ -35,7 +35,15 @@ public class EvenTester {
         Even E3 = E1.add(E2);
         System.out.println("E3: " + E3);
         //Add E3 to E1 and display it?
-
+        E1 = E1.add(E3);
+        System.out.println("E1: " + E1);
         //In one instruction do the following E3 = E1 + (E1 + E2)
+        E3 = E1.add(E1.add(E2));
+        System.out.println("E3: " + E3);
+        Even E4 = new Even(13);
+        System.out.println("E4: " + E4);
+        //add 3 to E4
+        E4 = E4.add(3);
+        System.out.println("E4: " + E4);
     }
 }
