@@ -14,4 +14,43 @@ in this object and a
 -
  */
 public class Even {
+    private int even;
+    //getter
+    public int getEven(){
+        return even;
+    }
+    //setter
+    public void setEven(int e){
+        if(e%2 == 0){
+            this.even = e;
+        }else{
+            this.even = e+1;
+        }
+    }
+    public void print(){
+        System.out.println("even: " + even);
+    }
+    public String toString(){
+        return "even: " + even;
+    }
+    public boolean equals(Even e){
+        //How many objects are there here? There are two objects
+        //this and e. Both have even attribute, compare them
+        if(this.even == e.even){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    //design a method that returns the sum of two Even objects
+    //without changing either one.
+    public Even add(Even e){
+        //How many Even objects are there in total?
+        //There will be three objects: e, this, and the returned object
+        //A third object is created because e and this should not be modified.
+        Even sum = new Even();
+        sum.setEven(e.even + this.even);
+        return sum;
+    }
+
 }
