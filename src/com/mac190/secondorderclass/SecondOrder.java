@@ -7,7 +7,28 @@ read inputs from the user to change the attributes of the object
 invoke solve to solve the equation.
  */
 public class SecondOrder {
-    double a, b, c;
+    private double a, b, c;
+    //getters
+    public double getA(){
+        return a;
+    }
+    public double getB(){
+        return b;
+    }
+    public double getC(){
+        return c;
+    }
+    //setters
+    public void setA(double a){
+        this.a = a;
+    }
+    public void setB(double a){
+        this.b = a;
+    }
+    public void setC(double a){
+        this.c = a;
+    }
+
     public void solve(){
         if(a == 0) {
             if(b == 0){

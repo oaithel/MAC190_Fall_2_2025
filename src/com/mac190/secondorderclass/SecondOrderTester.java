@@ -9,9 +9,9 @@ public class SecondOrderTester {
         SecondOrder second = new SecondOrder();
         do{
             System.out.println("Please enter the coefficients a, b, and c: ");
-            second.a = sc.nextDouble();
-            second.b = sc.nextDouble();
-            second.c = sc.nextDouble();
+            second.setA(sc.nextDouble());
+            second.setB(sc.nextDouble());
+            second.setC(sc.nextDouble());
            //invoke solve() method
             second.solve();
             System.out.println("Do you want to continue[Y/N]: ");

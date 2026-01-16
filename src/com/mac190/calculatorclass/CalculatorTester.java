@@ -11,11 +11,11 @@ public class CalculatorTester {
         do {
             System.out.println("enter an expression in the form A + B:");
             //read a first double
-            calc.first = sc.nextDouble();
+            calc.setFirst(sc.nextDouble());
             //read a character
-            calc.oper = sc.next().charAt(0);
+            calc.setOper(sc.next().charAt(0));
             //read the second double
-            calc.second = sc.nextDouble();
+            calc.setSecond(sc.nextDouble());
             calc.evaluate();
             System.out.println("Do you want to continue[Y/N]: ");
             userChoice = sc.next().charAt(0);
