@@ -90,14 +90,30 @@ public class MinMax {
         MinMax minMax = (MinMax) o;//casting
         return (min == minMax.min && max == minMax.max);
     }
+    //This add method is a member if the class, it can be invoked only on an object
+    //thus this.
     public MinMax add(int a){
         MinMax m = new MinMax(this.min + a, this.max + a);
         return m;
     }
+    //We can implement the method above as a static method that belongs to the
+    //class and not to an object. Therefore the method should be called
+    //on the class not the object, as there is no this in this case
+    public static MinMax add(MinMax obj, int a){
+        MinMax m = new MinMax(obj.min + a, obj.max + a);
+        return m;
+    }
+    //member method to add two MinMax objects
     public MinMax add(MinMax obj){
         MinMax m = new MinMax(this.min + obj.min, this.max + obj.max);
         return m;
     }
+    //implement the above method as a static method
+    public static MinMax add(MinMax m1, MinMax obj){
+        MinMax res = new MinMax(m1.min + obj.min, m1.max + obj.max);
+        return res;
+    }
+
     public MinMax multiply(int a){
         MinMax m = new MinMax(this.min*a, this.max*a);
         return m;
