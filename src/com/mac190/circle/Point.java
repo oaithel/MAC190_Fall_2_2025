@@ -59,11 +59,17 @@ public class Point {
     public String toString() {
         return "(" +X +", " + Y +")";
     }
+
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Point point = (Point) o;
+        if (this == o) return true;
+        if (!(o instanceof Point point)) return false;
         return Double.compare(X, point.X) == 0 && Double.compare(Y, point.Y) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(X, Y);
     }
 
     public Point add(Point p){
