@@ -1,4 +1,7 @@
 package com.mac190.animal;
+
+import java.util.Objects;
+
 /*
 Design a class Animal that has the following:
 age, color, species, diet
@@ -9,4 +12,64 @@ age, color, species, diet
 - method speak() display don't know how to speak yet!
  */
 public class Animal {
+    private int age;
+    private String color, species, diet;
+    //default constructor
+    public Animal(){
+        age = 0;
+        color = "N/A";
+        species = "N/A";
+        diet = "N/A";
+    }
+    public Animal(int a, String c, String d, String s){
+        age = a;
+        color = c;
+        diet = d;
+        species = s;
+    }
+
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public String getColor() {
+        return color;
+    }
+    public void setColor(String color) {
+        this.color = color;
+    }
+    public String getSpecies() {
+        return species;
+    }
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+    public String getDiet() {
+        return diet;
+    }
+    public void setDiet(String diet) {
+        this.diet = diet;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "age=" + age +
+                ", color='" + color + '\'' +
+                ", species='" + species + '\'' +
+                ", diet='" + diet + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Animal animal)) return false;
+        return age == animal.age && this.color.equals(animal.color) && species.equals(animal.species) && Objects.equals(diet, animal.diet);
+    }
+    public void speak(){
+        System.out.println("I don't know how to speak");
+    }
 }
