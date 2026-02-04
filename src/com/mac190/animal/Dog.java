@@ -48,4 +48,7 @@ public class Dog extends Animal{
         return this.breed.equals(d.breed);
     }
 
+    public void speak(){
+        System.out.println("Waf! Waf!");
+    }
 }
