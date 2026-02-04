@@ -10,9 +10,9 @@ public class MidtermTester {
         System.out.println("D3: " + D3);
         Device D4 = Device.add(D1, D2);
         System.out.println("D4: " + D4);
-        Smartphone S1 = new Smartphone(D2, 20);
+        ISmartphone S1 = new ISmartphone(D2, 20);
         System.out.println("S1: " + S1);
-        Smartphone S2 = S1.add(new Smartphone(D1, 50));
+        ISmartphone S2 = S1.add(new ISmartphone(D1, 50));
         System.out.println("S2: " + S2);
     }
 }

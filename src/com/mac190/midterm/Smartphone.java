@@ -65,5 +65,10 @@ public class Smartphone {
         int st = (this.getStorage() + S.getStorage())/2;
         return new Smartphone(newDevice, st);
     }
+    public static Smartphone add(Smartphone T, Smartphone S){
+        Device newDevice = T.getBaseDevice().add(S.getBaseDevice());
+        int st = (T.getStorage() + S.getStorage())/2;
+        return new Smartphone(newDevice, st);
+    }
 
 }
