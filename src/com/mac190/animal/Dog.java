@@ -12,7 +12,7 @@ and in addition it has, breed and its diet is Omnivore, and of Canine species.
 - speak method displays "Waf Waf !".
 -Test your classes.
  */
-public class Dog extends Animal{
+public class Dog extends Animal implements iAnimal{
     private String breed;
     public Dog(){
         super();
@@ -23,12 +23,6 @@ public class Dog extends Animal{
     public Dog(int a, String c, String b){
         super(a, c, "Omnivore", "Canine");
         this.breed = b;
-    }
-    public String getBreed() {
-        return breed;
-    }
-    public void setBreed(String breed) {
-        this.breed = breed;
     }
 
     @Override
@@ -50,5 +44,15 @@ public class Dog extends Animal{
 
     public void speak(){
         System.out.println("Waf! Waf!");
+    }
+
+    @Override
+    public String getBreed() {
+        return breed;
+    }
+
+    @Override
+    public void setBreed(String s) {
+        breed = s;
     }
 }

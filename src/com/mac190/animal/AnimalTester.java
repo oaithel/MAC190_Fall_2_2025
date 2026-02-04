@@ -3,7 +3,12 @@ package com.mac190.animal;
 public class AnimalTester {
     public static void main(String[] args) {
         //create A default Animal
-        Animal A1 = new Animal();
+        //Animal A1 = new Animal(); You cannot instanciate an abstract class
+        //You cannot make an object out of an abstract because there is code
+        //that is missing.
+        //You still can use the class as a reference, but the object should
+        //of a derived class
+        Animal A1 = new Dog();
         System.out.println("A1: " + A1);
         A1.speak();
         A1.setDiet("Omnivore");
@@ -34,13 +39,19 @@ public class AnimalTester {
         A2 = (Animal) C1;
         System.out.println("A2: " + A2);
         A2.speak();
-        D2 = (Dog) A2; //You cannot make a Dog out of a Cat even if they
+       // D2 = (Dog) A2; //You cannot make a Dog out of a Cat even if they
         //have the same attributes (In C++ it would work)
-        System.out.println("D2: " + D2);
+        //System.out.println("D2: " + D2);
         //You canot make a bigger object from a smaller one
         //You cannot make an object of a class from a different class not related even if they
         //have the same attributes
         //You can make a smaller object from a derived object .
+
+        //We can use an interface on an Object of class implementing it.
+        iAnimal IA = D2;
+        //IA can only invoke the methods defined in the iterface
+        IA.speak();
+
 
     }
 }
