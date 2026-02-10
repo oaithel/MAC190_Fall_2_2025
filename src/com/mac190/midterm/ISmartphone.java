@@ -1,6 +1,6 @@
 package com.mac190.midterm;
 //Implement the class Smartphone using inheritance.
-public class ISmartphone extends Device{
+public class ISmartphone extends Device implements Addable{
     private int storage;
     //default constructor
     public ISmartphone(){
@@ -59,5 +59,9 @@ public class ISmartphone extends Device{
         return new ISmartphone(newDevice, st);
     }
 
-
+    @Override
+    public Addable add(Addable o){
+        ISmartphone S = (ISmartphone) o;
+        return this.add(S);
+    }
 }

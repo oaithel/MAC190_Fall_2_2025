@@ -2,7 +2,7 @@ package com.mac190.midterm;
 
 import java.util.Objects;
 
-public class Smartphone {
+public class Smartphone implements Addable{
     private Device baseDevice;
     private int storage;
     //default constructor
@@ -71,4 +71,9 @@ public class Smartphone {
         return new Smartphone(newDevice, st);
     }
 
+    @Override
+    public Addable add(Addable o) {
+        Smartphone S = (Smartphone) o;
+        return this.add(S);
+    }
 }

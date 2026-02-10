@@ -2,7 +2,7 @@ package com.mac190.midterm;
 
 import java.util.Objects;
 
-public class Device {
+public class Device implements Addable{
     private String brand;
     private double batteryLife;
 
@@ -59,5 +59,11 @@ public class Device {
         String newBrand = T.brand + "-" + D.brand;
         double newBatteryLife = (T.batteryLife + D.batteryLife)/2.0;
         return new Device(newBrand, newBatteryLife);
+    }
+
+    @Override
+    public Addable add(Addable o) {
+        Device D = (Device) o;
+        return this.add(D);
     }
 }
