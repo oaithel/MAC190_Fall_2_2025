@@ -1,6 +1,7 @@
 package com.mac190.files;
 
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -40,7 +41,7 @@ public class FilesExample1 {
             //go into a loop, for as long as the input line is not "."
             System.out.println("Enter your text, end it with dot on empty line:");
             String line = sc.nextLine();
-            while(!(line.trim()).equals(".")) {
+            while (!(line.trim()).equals(".")) {
                 //write the line to the file
                 bw.write(line + "\n");
                 //read a line and write it the the file add "\n"
@@ -49,6 +50,8 @@ public class FilesExample1 {
             //end of the loop, close the BufferedWriter.
             System.out.println("Writing your text to the file .....");
             bw.close();
+        }catch(FileNotFoundException e){
+            System.out.println("File Not foundException: " + e.getMessage());
         }catch(IOException e){
             System.out.println("IOException: " + e.getMessage());
         }catch(Exception e){
